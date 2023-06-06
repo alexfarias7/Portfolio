@@ -3,7 +3,7 @@ import React from "react";
 const PageProjects = () => {
   return (
     <>
-      <h1>Pagina Projetos</h1>
+      <h1 className="mt-[200px]">Pagina Projetos</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus illum
         perspiciatis harum repudiandae nobis, facilis enim, distinctio illo

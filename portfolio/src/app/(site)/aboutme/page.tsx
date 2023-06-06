@@ -3,7 +3,7 @@ import React from "react";
 const PageAboutMe = () => {
   return (
     <>
-      <h1>Pagina SOBRE</h1>
+      <h1 className="mt-[200px]">Pagina SOBRE</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
         quis mollitia consectetur dolorem consequuntur ipsum ea eos! Laboriosam

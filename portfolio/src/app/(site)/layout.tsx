@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "../globals.css";
 import { Inter, Poppins, Montserrat, Fira_Mono } from "next/font/google";
 import Footer from "@/components/footer";
+import { AppContexts } from "@/contexts";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -38,9 +39,11 @@ export default function RootLayout({
       className={`${inter.className} ${montserrat.className} ${firamono.className}  ${poppins.className}`}
     >
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AppContexts>
+          <Header />
+          {children}
+          <Footer />
+        </AppContexts>
       </body>
     </html>
   );
