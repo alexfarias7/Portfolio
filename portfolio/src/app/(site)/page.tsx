@@ -9,6 +9,96 @@ export default async function Home() {
       <p className="text-blue1 text-[40px] bg-red-50 cursor-pointer w-[300px] font-popins">
         {homepage.nameHero}
       </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        nesciunt atque doloremque explicabo sapiente, consequatur ut? Aliquam
+        voluptas, ducimus neque officiis molestias recusandae modi corporis
+        deserunt iste? Fugiat, deleniti cupiditate!
+      </p>
     </>
   );
 }

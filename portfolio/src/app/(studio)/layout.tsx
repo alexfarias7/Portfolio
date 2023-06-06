@@ -1,3 +1,5 @@
+import "../globals.css";
+
 export const metadata = {
   title: "My Awesome Site!",
   description: "My portifolio",
