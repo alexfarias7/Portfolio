@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base{
+ *{
+  @apply m-0 p-0 inset-0 box-border;
+ }
+ html {
+  @apply text-[62.5%]
+ }
+ body{
+  @apply text-[1.6rem] font-popins bg-blue5;
+ }
+ ul{
+    @apply list-none
+ }
+ a{
+    @apply no-underline
+ }
+ img{
+    @apply w-[100%]
+ }
+ .container-max {
+    @apply max-w-[1440px] px-[20px] mx-auto lg:px-[40px]
+ }
+ .menu-hover {
+    @apply inline-block  cursor-pointer relative  after:content-[''] after:block  after:h-[4px] after:w-0 after:bg-purple5 after:mt-1 after:duration-700 after:absolute after:rounded-full hover:after:w-full hover:text-purple5 hover:duration-700
+ }
+ .btn-icons {
+   @apply text-[18px] font-semibold flex gap-[20px]  bg-blue7  rounded-full py-[8px] px-[24px] font-popins text-blue0 border-[2px] border-solid border-blue9 items-center 
+   shadow-[0px_6px_10px_4px_rgba(0,0,0,0.15),0px_2px_3px_rgba(0,0,0,0.3)] 
+   hover:shadow-[2px_8px_8px_-5px_rgba(0,0,0,0.3)]
+  hover:translate-y-[7px]
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    hover:bg-blue4 transition duration-500 ease-in-out focus:bg-blue0  focus:text-blue5 focus-within:fill-blue5 focus:border-blue9 
+ }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ .shadowCard{
+  @apply shadow-[0px_2px_4px_rgba(0,0,0,0.14),0px_3px_4px_rgba(0,0,0,0.12),0px_1px_5px_rgba(0,0,0,0.2)]
+
+ }
+ .infoSection {
+   @apply before:content-[''] before:block  before:h-[4px] before:w-[60px]   before:bg-purple5  flex  items-center gap-[8px]
+ }
+ .hoverGroupsIcons{
+ @apply group-hover:text-purple5 transition duration-500 ease-in-out fill-current
+ }
+
+ .embla__dot,
+ .embla__button {
+   @apply appearance-none	 bg-transparent touch-manipulation	 inline-flex no-underline	cursor-pointer  border-0 p-0 m-0 gap-8
+ }
+ .embla__dots {
+   @apply z-[1] bottom-[1.2rem]  left-0 right-0 flex justify-center items-center gap-3
+ }
+ 
+ .embla__dot:after {
+  @apply bg-blue0 rounded w-full content-[''] h-[0.3rem]
+
+ }
+
+ .embla__button {
+   @apply z-[1]   flex items-center justify-center top-[50%]  absolute translate-y-[-50%] cursor-pointer w-[4rem] h-[4rem] 
+
+ }
+
+ .embla__button:disabled {
+  @apply opacity-30 
+   
+ }
+ .embla__button__svg {
+  @apply w-[75%] h-[75%]
+ }
+
+ .textTitle {
+  @apply text-blue0 font-montserrat font-semibold text-[22px] text-center
+ }
+
+ .textDescription{
+  @apply text-center font-popins leading-[28px] font-normal text-[16px] text-blue3 
+ }
+ .iconsMediaSocial{
+   @apply w-[36px] h-[36px] fill-current cursor-pointer hover:fill-purple5 transition duration-500 ease-in-out sm:h-[56px] sm:w-[56px] sm:p-[10px] 
+ }
+
+ 
 }
