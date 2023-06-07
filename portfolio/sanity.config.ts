@@ -9,7 +9,7 @@ const config = defineConfig({
   apiVersion: process.env.NEXT_PUBLIC_API_VERSION,
   basePath: process.env.NEXT_PUBLIC_BASEPATH,
   plugins: [deskTool()],
-  useCdn: false,
+  useCdn: true,
   schema: { types: schemas },
 });
 

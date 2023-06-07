@@ -10,7 +10,7 @@ export async function getHomePage(): Promise<TypesHomePage> {
       lastName,
       apresetationHero,
       occupationHero,
-      "imageHero": image.asset->url
+      "image": image.asset->url,
   }`;
   const res = await createClient(configSchema).fetch(query);
   // console.log(res);

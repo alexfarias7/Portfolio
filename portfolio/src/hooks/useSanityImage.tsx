@@ -1,3 +1,5 @@
+"use client";
+
 import imageUrlBuilder from "@sanity/image-url";
 import config from "../../sanity.config";
 

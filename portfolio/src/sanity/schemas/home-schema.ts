@@ -8,7 +8,19 @@ const homeSchame = {
     { name: "lastName", title: "LastNameHero", type: "string" },
     { name: "apresetationHero", title: "ApresetationHero", type: "string" },
     { name: "occupationHero", title: "OccupationHero", type: "string" },
-    { name: "imageHero", title: "ImageHero", type: "image" },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
   ],
 };
 

@@ -4,5 +4,5 @@ export type TypesHomePage = {
   lastName: string;
   occupationHero: string;
   apresetationHero: string;
-  imageHero: string;
+  image: string;
 };
