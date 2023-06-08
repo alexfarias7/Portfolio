@@ -1,17 +1,23 @@
-import React, { ReactNode } from 'react';
+import classNames from "classnames";
+import React, { ReactNode } from "react";
 
-interface IBtnIcon {
-	text: string;
-	icon: ReactNode;
-	classStyle: string;
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string;
+  icon: ReactNode;
 }
 
-const BtnIcon = ({ classStyle, text, icon }: IBtnIcon) => {
-	return (
-		<button className={classStyle}>
-			<span>{text}</span>
-			<span> {icon}</span>
-		</button>
-	);
+interface IBtnIcon {
+  text: string;
+  icon: ReactNode;
+  classStyle: string;
+}
+
+const BtnIcon = ({ className, text, icon }: Props) => {
+  return (
+    <button className={classNames("btn-icons lg:w-[220px] ", className)}>
+      <span>{text}</span>
+      <span> {icon}</span>
+    </button>
+  );
 };
 export default BtnIcon;

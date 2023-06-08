@@ -36,6 +36,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         firamono: ["Fira Mono", "monospace"],
       },
+      boxShadow: {
+        button: "0px 0px 68px 7px rgba(5, 150, 105, 0.4)",
+      },
       screens: {
         xl: { max: "1200px" },
         lg: { max: "992px" },
