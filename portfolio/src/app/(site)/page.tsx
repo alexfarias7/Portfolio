@@ -1,3 +1,4 @@
+import MySkills from "@/components/pages/home/Skills/Index";
 import Hero from "@/components/pages/home/herosection/Index";
 import WhatIDo from "@/components/pages/home/whatido/Index";
 import { getHomePage } from "@/sanity/utils/sanity_homepage.utils";
@@ -9,6 +10,7 @@ export default async function Home() {
     <>
       <Hero hero={homepage} />
       <WhatIDo />
+      <MySkills />
     </>
   );
 }

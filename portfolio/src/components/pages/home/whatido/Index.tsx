@@ -4,7 +4,7 @@ import CardsActivitIes from "./CardsActivitIes";
 const WhatIDo = () => {
   return (
     <section>
-      <div className="container-max mt-[80px] flex flex-col gap-[80px] sm:gap-[40px]">
+      <div className="container-max mt-[80px] flex flex-col gap-[80px] sm:gap-[40px] sm:justify-center items-center">
         <SectionTitle title="O que eu faço" punctuation=":" />
         <CardsActivitIes />
       </div>
