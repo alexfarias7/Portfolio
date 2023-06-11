@@ -1,3 +1,4 @@
+import KnowTechs from "@/components/pages/aboutme/knowtechs/Index";
 import React from "react";
 
 const PageAboutMe = () => {
@@ -10,6 +11,7 @@ const PageAboutMe = () => {
         at, amet voluptate error est dolorem porro quasi excepturi debitis eum
         tempora?
       </p>
+      <KnowTechs />
     </>
   );
 };

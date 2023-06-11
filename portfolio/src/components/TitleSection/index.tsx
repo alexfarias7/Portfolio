@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
 interface ISectionTitle {
-	title: string;
-	punctuation: string;
+  title: string;
+  punctuation: string;
 }
 
 const SectionTitle = ({ title, punctuation }: ISectionTitle) => {
-	return (
-		<h1 className="text-blue0 font-montserrat font-semibold text-[40px] infoSection self-start w-max">
-			{title} <span className="text-purple5">{punctuation}</span>
-		</h1>
-	);
+  return (
+    <h1 className="text-blue0 font-montserrat font-semibold text-[40px] infoSection self-start w-max  lg:text-[24px]">
+      {title} <span className="text-purple5">{punctuation}</span>
+    </h1>
+  );
 };
 
 export default SectionTitle;
