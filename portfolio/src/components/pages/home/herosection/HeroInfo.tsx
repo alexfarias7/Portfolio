@@ -4,10 +4,12 @@ import HeroBtns from "./HeroBtn";
 import TechBadge from "@/components/tachbadges";
 import HeroContact from "./HeroContact";
 import HeroBadge from "./HeroBadge";
+import { HomePageInfo } from "@/types/schemas/pageinfo";
+import { homePageInfo } from "@/types/schemas/homepage";
 
-const HeroInfo = async ({ hero }: IHeroInfo) => {
+const HeroInfo = async ({ homeInfo }: homePageInfo) => {
   const { greetingHero, nameHero, lastName, occupationHero, apresetationHero } =
-    hero;
+    homeInfo;
   return (
     <div className="flex flex-wrap   h-[500px] items-center max-w-[505px] md:justify-center">
       <div className=" lg:gap-6 flex  flex-col  ">
@@ -28,14 +30,14 @@ const HeroInfo = async ({ hero }: IHeroInfo) => {
               {apresetationHero}
               <span className="text-purple5 ">{occupationHero}</span>
             </p>
-            <HeroBadge />
+            <HeroBadge homeInfo={homeInfo} />
           </div>
         </div>
       </div>
       <div className=" self-end md:self-start  flex flex-col gap-4">
         <HeroBtns />
         <div className="hidden md:flex">
-          <HeroContact />
+          <HeroContact homeInfo={homeInfo} />
         </div>
       </div>
     </div>

@@ -39,13 +39,6 @@ const projectSchema = {
       of: [{ type: "block" }],
     },
   ],
-  orderings: [
-    {
-      title: "Created At",
-      name: "_createdAt",
-      by: [{ field: "_createdAt", direction: "esc" }],
-    },
-  ],
 };
 
 export default projectSchema;

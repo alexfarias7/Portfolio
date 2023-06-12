@@ -12,6 +12,8 @@ import {
 import BtnIcon from "@/components/BtnIcon";
 import { HiArrowDown, HiArrowRight } from "react-icons/hi";
 import classNames from "classnames";
+import { homePageInfo } from "@/types/schemas/homepage";
+import CmsIcon from "@/components/cmsIcon/Index";
 
 const MOCK_CONTACTS = [
   { url: "https://github.com/", icon: <TbBrandGithub /> },
@@ -19,7 +21,7 @@ const MOCK_CONTACTS = [
   { url: "https://github.com/", icon: <TbBrandTwitter /> },
   { url: "https://github.com/", icon: <TbBrandInstagram /> },
 ];
-const HeroContact = () => {
+const HeroContact = ({ homeInfo }: homePageInfo) => {
   return (
     <div className={" flex items-center gap-8 md:flex-col md:gap-2"}>
       <BtnIcon
@@ -34,14 +36,14 @@ const HeroContact = () => {
       />
 
       <div className="text-2xl text-purple0 flex items-center  md:h-10 gap-3 ">
-        {MOCK_CONTACTS.map((contact, index) => (
+        {homeInfo.socials.map(({ url, iconSvg }, index) => (
           <a
             className="hover:text-purple5  transition-colors sm:p-3"
-            href={contact.url}
+            href={url}
             key={`contact-${index}`}
             target="_blank"
           >
-            {contact.icon}
+            <CmsIcon icon={iconSvg} />
           </a>
         ))}
       </div>

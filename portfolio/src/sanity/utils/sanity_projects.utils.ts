@@ -15,7 +15,6 @@ export async function getProjects(): Promise<TypesProject[]> {
     }`
   );
 }
-
 export async function getProject(slug: string): Promise<TypesProject> {
   return createClient(configSchema).fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
