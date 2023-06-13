@@ -21,6 +21,41 @@ export const getPageHomeInfoQuery = async (): Promise<HomePageData> => {
     technologies {
       name
     }
+    functions{
+      iconSvg
+      activity
+      activityComplement
+      description
+    }
+    skillInfoFrontEnd {
+      iconSvg
+    }
+    skillInfoBackend{
+      iconSvg
+    }
+    skillsFrontEnd{
+      iconSvg
+      language
+      width
+      percent
+  } 
+   skillsBackEnd{
+     iconSvg
+     language
+     width
+     percent
+  } 
+  frontEndNav{
+    language
+    iconSvg
+  }
+  backEndNav{
+    language
+    iconSvg
+  }
+
+
+
     }
   }
     `;

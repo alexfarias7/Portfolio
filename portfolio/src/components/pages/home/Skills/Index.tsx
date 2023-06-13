@@ -2,27 +2,25 @@ import SectionTitle from "@/components/TitleSection";
 import HabilitySkilss from "./HabilitySkills";
 import SkillsBackEnd from "./SkillsBackEnd";
 import SkillsFrontEnd from "./SkillsFrontEnd";
-import FrontEndNav from "@/components/Icons/FrontEndNav";
-import FrontEndIcon from "@/components/Icons/FrontEndIcon";
-import BackendNavIcom from "@/components/Icons/BackendNavIcom";
-import BackEndIcon from "@/components/Icons/BackEndIcon";
 
-const MySkills = () => {
+import { homePageInfo } from "@/types/schemas/homepage";
+
+const MySkills = ({ homeInfo }: homePageInfo) => {
   return (
     <section>
       <div className="container-max mt-[80px]">
         <SectionTitle title="Minhas Habilidades" punctuation="." />
         <HabilitySkilss
-          IconHability={<FrontEndNav />}
-          skilss={<SkillsFrontEnd />}
-          IconSkill={<FrontEndIcon />}
-          titleHability={"FrontEnd"}
+          IconHability={homeInfo.frontEndNav.iconSvg}
+          skilss={<SkillsFrontEnd homeInfo={homeInfo} />}
+          IconSkill={homeInfo.skillInfoFrontEnd.iconSvg}
+          titleHability={homeInfo.frontEndNav.language}
         />
         <HabilitySkilss
-          IconHability={<BackendNavIcom />}
-          skilss={<SkillsBackEnd />}
-          titleHability={"BackEnd"}
-          IconSkill={<BackEndIcon />}
+          IconHability={homeInfo.backEndNav.iconSvg}
+          skilss={<SkillsBackEnd homeInfo={homeInfo} />}
+          IconSkill={homeInfo.skillInfoBackend.iconSvg}
+          titleHability={homeInfo.backEndNav.language}
         />
       </div>
     </section>

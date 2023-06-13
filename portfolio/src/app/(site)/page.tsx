@@ -10,16 +10,16 @@ export default async function Home() {
   const { pagehome: homePageData } = await getPageHomeInfoQuery();
 
   console.log(
-    homePageData.socials.map(({ name }) => {
-      name;
+    homePageData.socials.map(({ url }) => {
+      url;
     })
   );
 
   return (
     <>
       <Hero homeInfo={homePageData} />
-      <WhatIDo />
-      <MySkills />
+      <WhatIDo homeInfo={homePageData} />
+      <MySkills homeInfo={homePageData} />
       <MyProjects />
     </>
   );

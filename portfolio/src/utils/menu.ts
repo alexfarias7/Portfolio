@@ -1,6 +1,6 @@
 export const menu = [
-  { label: "Home", href: "/" },
-  { label: "About me", href: "/aboutme" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
+  { label: "Inicio", href: "/" },
+  { label: "Sobre", href: "/aboutme" },
+  { label: "Projetos", href: "/projects" },
+  { label: "Contatos", href: "/contact" },
 ];
