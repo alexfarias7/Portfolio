@@ -1,4 +1,4 @@
-import { TypesHomePage } from "@/types/schemas/homepage";
+import { TypesHomePage } from "@/types/schemas/pages";
 import { configSchema } from "../config/config";
 import { createClient, groq } from "next-sanity";
 

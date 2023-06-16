@@ -12,7 +12,7 @@ import {
 import BtnIcon from "@/components/BtnIcon";
 import { HiArrowDown, HiArrowRight } from "react-icons/hi";
 import classNames from "classnames";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 import CmsIcon from "@/components/cmsIcon/Index";
 
 const MOCK_CONTACTS = [

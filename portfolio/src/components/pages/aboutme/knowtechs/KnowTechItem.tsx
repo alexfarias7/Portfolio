@@ -1,12 +1,10 @@
+import CmsIcon from "@/components/cmsIcon/Index";
+import { KnownTech } from "@/types/schemas/projectsInfo";
 import { getRelativeTimeString } from "@/utils/getRelativeTime";
 import { ReactNode } from "react";
 
 type KnowTechItemProps = {
-  tech: {
-    icon: ReactNode;
-    name: string;
-    startDate: string;
-  };
+  tech: KnownTech;
 };
 
 const KnowTechItem = ({ tech }: KnowTechItemProps) => {
@@ -23,7 +21,8 @@ const KnowTechItem = ({ tech }: KnowTechItemProps) => {
     >
       <div className="flex items-center justify-between">
         <p className="font-montserrat">{tech.name}</p>
-        {tech.icon}
+
+        <CmsIcon icon={tech.iconSvg} />
       </div>
       <span>{relativeTime} de experiência</span>
     </div>

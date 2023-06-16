@@ -1,3 +1,4 @@
+import { AboutPageInfo } from "./aboutpageInfo";
 import { HomePageInfo } from "./pageinfo";
 
 /* export type TypesHomePage = {
@@ -11,4 +12,8 @@ import { HomePageInfo } from "./pageinfo";
 
 export type homePageInfo = {
   homeInfo: HomePageInfo;
+};
+
+export type aboutpageInfo = {
+  aboutInfo: AboutPageInfo;
 };

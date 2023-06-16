@@ -4,7 +4,7 @@ import Image from "next/image";
 import HeroInfo from "./HeroInfo";
 import HeroContact from "./HeroContact";
 import { HomePageInfo } from "@/types/schemas/pageinfo";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 type heroImage = {
   hero: HomePageInfo;

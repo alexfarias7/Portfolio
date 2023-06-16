@@ -1,5 +1,5 @@
 import TechBadge from "@/components/tachbadges";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 import React from "react";
 
 const HeroBadge = ({ homeInfo }: homePageInfo) => {

@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/TitleSection";
 import CardsActivitIes from "./CardsActivitIes";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 const WhatIDo = ({ homeInfo }: homePageInfo) => {
   return (

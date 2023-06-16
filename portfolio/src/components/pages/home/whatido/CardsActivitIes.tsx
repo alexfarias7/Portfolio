@@ -1,7 +1,7 @@
 import React from "react";
 
 import CardcAtivity from "./CardcAtivity";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 const CardsActivitIes = ({ homeInfo }: homePageInfo) => {
   return (

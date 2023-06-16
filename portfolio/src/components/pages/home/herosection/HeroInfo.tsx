@@ -5,7 +5,7 @@ import TechBadge from "@/components/tachbadges";
 import HeroContact from "./HeroContact";
 import HeroBadge from "./HeroBadge";
 import { HomePageInfo } from "@/types/schemas/pageinfo";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 const HeroInfo = async ({ homeInfo }: homePageInfo) => {
   const { greetingHero, nameHero, lastName, occupationHero, apresetationHero } =

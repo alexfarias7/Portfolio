@@ -1,5 +1,5 @@
 import ProgressBar from "./ProgressBar";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 const SkillsBackEnd = ({ homeInfo }: homePageInfo) => {
   return (

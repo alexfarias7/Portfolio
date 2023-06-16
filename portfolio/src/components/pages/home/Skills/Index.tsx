@@ -3,7 +3,7 @@ import HabilitySkilss from "./HabilitySkills";
 import SkillsBackEnd from "./SkillsBackEnd";
 import SkillsFrontEnd from "./SkillsFrontEnd";
 
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 const MySkills = ({ homeInfo }: homePageInfo) => {
   return (

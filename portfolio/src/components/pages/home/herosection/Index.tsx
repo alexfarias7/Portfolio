@@ -2,7 +2,7 @@ import { IHero } from "@/interfaces/heroInterface";
 import HeroImg from "./HeroImg";
 import HeroInfo from "./HeroInfo";
 import { HomePageInfo } from "@/types/schemas/pageinfo";
-import { homePageInfo } from "@/types/schemas/homepage";
+import { homePageInfo } from "@/types/schemas/pages";
 
 type pageData = {
   homeInfo: HomePageInfo;
