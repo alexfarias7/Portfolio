@@ -14,14 +14,22 @@ import WebIcon from "@/components/Icons/WebIcon";
 import { getProjects } from "@/sanity/utils/sanity_projects.utils";
 import CardProject from "./CardProject";
 import { TypesProject } from "@/types/schemas/projects";
+import { Project } from "@/types/schemas/projectsInfo";
+import { HomePageData } from "@/types/schemas/pageinfo";
+import { homePageInfo } from "@/types/schemas/pages";
+
+type HighlightProjectsProps = {
+  projects: Project[];
+};
 
 type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
+  projects: Project[];
 };
 
 const CauroselProject: React.FC<PropType> = (props) => {
-  const { options } = props;
+  const { options, projects } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -60,7 +68,7 @@ const CauroselProject: React.FC<PropType> = (props) => {
     <>
       <div className="p-[1.6rem] relative mt-[40px]">
         <div className="overflow-hidden" ref={emblaRef}>
-          <CardProject />
+          <CardProject projects={projects} />
         </div>
 
         <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />

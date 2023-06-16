@@ -2,8 +2,14 @@ import SectionTitle from "@/components/TitleSection";
 import CauroselProject from "./CauroselProjects";
 
 import { EmblaOptionsType } from "embla-carousel-react";
-import { TypesProject } from "@/types/schemas/projects";
-const MyProjects = () => {
+import { Project } from "@/types/schemas/projectsInfo";
+import { homePageInfo } from "@/types/schemas/pages";
+
+type HighlightProjectsProps = {
+  projects: Project[];
+};
+
+const MyProjects = ({ projects }: HighlightProjectsProps) => {
   const OPTIONS: EmblaOptionsType = {};
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
@@ -19,7 +25,11 @@ const MyProjects = () => {
           </h2>
           <button className="btn-icons rounded-[2px] ">All works</button>
         </div>
-        <CauroselProject slides={SLIDES} options={OPTIONS} />
+        <CauroselProject
+          slides={SLIDES}
+          options={OPTIONS}
+          projects={projects}
+        />
       </div>
     </section>
   );

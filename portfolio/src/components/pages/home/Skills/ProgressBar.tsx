@@ -1,13 +1,22 @@
 import CmsIcon from "@/components/cmsIcon/Index";
+import { cn } from "@/lib/utils";
+import classNames from "classnames";
 
 interface IProgressBar {
   language: string;
   percent: number;
   width: string;
   icon: string;
+  percentual: string;
 }
 
-const ProgressBar = ({ language, percent, width, icon }: IProgressBar) => {
+const ProgressBar = ({
+  language,
+  percent,
+  width,
+  icon,
+  percentual,
+}: IProgressBar) => {
   // eslint-disable-next-line prefer-const
   //let [value, setValue] = useState(0);
 
@@ -22,6 +31,8 @@ const ProgressBar = ({ language, percent, width, icon }: IProgressBar) => {
 			}, 10);
 		}, 10);
 	}, []); */
+
+  console.log(percent);
 
   return (
     <div className="flex gap-[40px] items-center justify-center group text-blue0">
@@ -41,8 +52,10 @@ const ProgressBar = ({ language, percent, width, icon }: IProgressBar) => {
 		 after:h-[30px] after:w-[10px]   after:bg-blue5  after:border-solid after:border-[2px] after:border-blue0 after:rounded-[2px] after:relative after:top-[-10px]`}
         >
           <div
-            className={`h-full rounded-l-full bg-blue0 rounded group-hover:bg-purple5 transition duration-500 ease-in-out 
-					${width}`}
+            className={cn(
+              "h-full rounded-l-full bg-blue0 rounded group-hover:bg-purple5 transition duration-500 ease-in-out ",
+              { width } && `w-[${percent}%]`
+            )}
           ></div>
         </div>
       </div>

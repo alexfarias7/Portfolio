@@ -1,30 +1,41 @@
 import BtnIcon from "@/components/BtnIcon";
 import WebIcon from "@/components/Icons/WebIcon";
+import { HomePageData } from "@/types/schemas/pageinfo";
+import { homePageInfo } from "@/types/schemas/pages";
 import { TypesProject } from "@/types/schemas/projects";
+import { Project } from "@/types/schemas/projectsInfo";
 import { projectsHome } from "@/utils/projectsHome";
+import Image from "next/image";
 
+type HighlightProjectsProps = {
+  projects: Project[];
+};
 
 import { register } from "swiper/element/bundle";
 // register Swiper custom elements
-const CardProject = () => {
+const CardProject = ({ projects }: HighlightProjectsProps) => {
   register();
   return (
     <div className="flex  flex-row h-auto   ml-[calc(1rem*-1)]   md:w-[80vw]">
-      {projectsHome.map(({ description, id, image, title }) => (
+      {projects?.map((project) => (
         <div
           className="flex-[0_0_100%] min-w-0 pl-[1rem] flex gap-[40px] xl:gap-[20px] justify-center items-center   "
-          key={id}
+          key={project.slug}
         >
-          <img
-            className="h-[240px] rounded-lg lg:hidden"
-            src={image}
-            alt={title}
+          <Image
+            height={240}
+            width={360}
+            className="h-[240px] w-[360px] ml-[10px] rounded-lg lg:hidden"
+            src={project.thumbnail.url}
+            alt={`Thumbnail do ${project.title}`}
           />
 
           <div className="flex flex-col gap-[12px]  justify-center items-center  ">
             <div className="flex flex-col gap-[12px]  justify-center items-center  w-[calc(100%-40px)]  xl:self-center  self-start ">
-              <h3 className="textTitle">{title}</h3>
-              <p className="textDescription text-justify">{description}</p>
+              <h3 className="textTitle">{project.title}</h3>
+              <p className="textDescription text-justify">
+                {project.shortDescription}
+              </p>
 
               <BtnIcon className="btn-icons " icon={<WebIcon />} text="Visit" />
             </div>

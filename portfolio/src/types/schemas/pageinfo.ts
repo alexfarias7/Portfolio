@@ -1,4 +1,4 @@
-import { KnownTech } from "./projectsInfo";
+import { KnownTech, Project } from "./projectsInfo";
 
 export type Social = {
   name: string;
@@ -14,10 +14,12 @@ export type FunctionHome = {
 };
 
 export type SkillHability = {
+  id: string;
   iconSvg: string;
   language: string;
   width: string;
   percent: number;
+  percentual: string;
 };
 
 export type SkillNavbar = {
@@ -47,6 +49,7 @@ export type HomePageInfo = {
   skillsBackEnd: SkillHability[];
   frontEndNav: SkillNavbar;
   backEndNav: SkillNavbar;
+  highlightProjects: Project[];
 };
 
 export type HomePageData = {

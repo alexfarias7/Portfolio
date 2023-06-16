@@ -38,8 +38,10 @@ export const getPageHomeInfoQuery = async (): Promise<HomePageData> => {
       language
       width
       percent
+      percentual
   } 
    skillsBackEnd{
+     id
      iconSvg
      language
      width
@@ -53,6 +55,18 @@ export const getPageHomeInfoQuery = async (): Promise<HomePageData> => {
     language
     iconSvg
   }
+
+  highlightProjects {
+    slug
+   thumbnail {
+     url
+    }
+   title
+   shortDescription
+   technologies {
+     name
+    }
+  } 
 
 
 

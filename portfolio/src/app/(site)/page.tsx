@@ -12,7 +12,7 @@ export default async function Home() {
       <Hero homeInfo={homePageData} />
       <WhatIDo homeInfo={homePageData} />
       <MySkills homeInfo={homePageData} />
-      <MyProjects />
+      <MyProjects projects={homePageData.highlightProjects} />
     </>
   );
 }
