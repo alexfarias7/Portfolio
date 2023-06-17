@@ -4,6 +4,7 @@ import CauroselProject from "./CauroselProjects";
 import { EmblaOptionsType } from "embla-carousel-react";
 import { Project } from "@/types/schemas/projectsInfo";
 import { homePageInfo } from "@/types/schemas/pages";
+import Link from "next/link";
 
 type HighlightProjectsProps = {
   projects: Project[];
@@ -23,7 +24,9 @@ const MyProjects = ({ projects }: HighlightProjectsProps) => {
           <h2 className="font-popins relative font-semibold text-[26px] text-blue0 inline-block   after:content-[''] after:block  after:h-[4px] after:bg-purple5 after:mt-1 after:absolute after:rounded-full after:w-full  sm:hidden">
             Latest Works
           </h2>
-          <button className="btn-icons rounded-[2px] ">All works</button>
+          <Link href={"/projects"}>
+            <button className="btn-icons rounded-[2px] ">All works</button>
+          </Link>
         </div>
         <CauroselProject
           slides={SLIDES}

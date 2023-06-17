@@ -1,10 +1,8 @@
 import CmsIcon from "@/components/cmsIcon/Index";
-import { cn } from "@/lib/utils";
-import classNames from "classnames";
 
 interface IProgressBar {
   language: string;
-  percent: number;
+  percent?: number;
   width: string;
   icon: string;
   percentual: string;
@@ -17,22 +15,8 @@ const ProgressBar = ({
   icon,
   percentual,
 }: IProgressBar) => {
-  // eslint-disable-next-line prefer-const
-  //let [value, setValue] = useState(0);
-
-  /* 	useEffect(() => {
-		const timer = setInterval(() => {
-			if (value === percent) clearInterval(timer);
-			if (value >= percent) value = percent;
-
-			setValue(value);
-			setTimeout(() => {
-				value++;
-			}, 10);
-		}, 10);
-	}, []); */
-
-  console.log(percent);
+  let widhPersonalized = `w-[${percent}%]`;
+  console.log(widhPersonalized);
 
   return (
     <div className="flex gap-[40px] items-center justify-center group text-blue0">
@@ -44,19 +28,20 @@ const ProgressBar = ({
           <h5 className="font-popins  text-[18px] text-blue0 font-semibold group-hover:text-purple5 transition duration-500 ease-in-out ">
             {language}
           </h5>
+
           <span className=" text-blue0 font-bold font-popins text-[18px] group-hover:text-purple5 transition duration-500 ease-in-out ">{`${percent}%`}</span>
         </div>
 
         <div
           className={`h-[10px] bg-blue3 rounded-full w-full  flex after:content-['']  after:inline-block 
-		 after:h-[30px] after:w-[10px]   after:bg-blue5  after:border-solid after:border-[2px] after:border-blue0 after:rounded-[2px] after:relative after:top-[-10px]`}
+		 after:h-[30px] after:w-[10px]   after:bg-blue5  after:border-solid after:border-[2px] after:border-blue0 after:rounded-[2px] after:relative after:top-[-10px] `}
         >
           <div
-            className={cn(
-              "h-full rounded-l-full bg-blue0 rounded group-hover:bg-purple5 transition duration-500 ease-in-out ",
-              { width } && `w-[${percent}%]`
-            )}
-          ></div>
+            style={{
+              width: `${percent}%`,
+            }}
+            className="h-full rounded-l-full bg-blue0 rounded group-hover:bg-purple5 transition duration-500 ease-in-out "
+          />
         </div>
       </div>
     </div>

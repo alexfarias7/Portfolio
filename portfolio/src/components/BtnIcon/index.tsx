@@ -6,12 +6,6 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon: ReactNode;
 }
 
-interface IBtnIcon {
-  text: string;
-  icon: ReactNode;
-  classStyle: string;
-}
-
 const BtnIcon = ({ className, text, icon }: Props) => {
   return (
     <button className={classNames("btn-icons lg:w-[220px] ", className)}>

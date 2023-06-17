@@ -8,11 +8,11 @@ export default async function Home() {
   const { pagehome: homePageData } = await getPageHomeInfoQuery();
 
   return (
-    <>
+    <main>
       <Hero homeInfo={homePageData} />
       <WhatIDo homeInfo={homePageData} />
       <MySkills homeInfo={homePageData} />
       <MyProjects projects={homePageData.highlightProjects} />
-    </>
+    </main>
   );
 }
