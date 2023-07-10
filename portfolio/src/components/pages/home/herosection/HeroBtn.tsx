@@ -1,4 +1,4 @@
-import BtnIcon from "@/components/BtnIcon";
+import BtnIcon from "@/components/Buttons/BtnIcon";
 import Download from "@/components/Icons/Download";
 import PortfolioIcon from "@/components/Icons/PortfolioIcon";
 

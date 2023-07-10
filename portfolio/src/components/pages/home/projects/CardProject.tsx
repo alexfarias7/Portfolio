@@ -1,4 +1,4 @@
-import BtnIcon from "@/components/BtnIcon";
+import BtnIcon from "@/components/Buttons/BtnIcon";
 import WebIcon from "@/components/Icons/WebIcon";
 import { HomePageData } from "@/types/schemas/pageinfo";
 import { homePageInfo } from "@/types/schemas/pages";

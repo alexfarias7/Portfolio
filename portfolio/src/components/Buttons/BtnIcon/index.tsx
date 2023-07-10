@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,7 +8,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const BtnIcon = ({ className, text, icon }: Props) => {
   return (
-    <button className={classNames("btn-icons lg:w-[220px] ", className)}>
+    <button className={cn("btn-icons lg:min-w-[220px] ", className)}>
       <span>{text}</span>
       <span> {icon}</span>
     </button>

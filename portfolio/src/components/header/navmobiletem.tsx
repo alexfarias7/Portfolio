@@ -28,7 +28,7 @@ const Navmobiletem = ({ label, href }: Props) => {
         onClick={() => handleButtonClick(href)}
         className={classNames(
           "w-full py-4 flex items-start hover:text-purple5  justify-center text-3xl text-gray-500 hover:duration-700 cursor-pointer ",
-          isActive && "text-blue5"
+          isActive && "text-blue9"
         )}
       >
         {label}

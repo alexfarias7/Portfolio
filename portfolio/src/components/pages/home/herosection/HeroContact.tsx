@@ -9,11 +9,11 @@ import {
   TbBrandInstagram,
 } from "react-icons/tb";
 
-import BtnIcon from "@/components/BtnIcon";
 import { HiArrowDown, HiArrowRight } from "react-icons/hi";
 import classNames from "classnames";
 import { homePageInfo } from "@/types/schemas/pages";
 import CmsIcon from "@/components/cmsIcon/Index";
+import BtnIcon from "@/components/Buttons/BtnIcon";
 
 const MOCK_CONTACTS = [
   { url: "https://github.com/", icon: <TbBrandGithub /> },

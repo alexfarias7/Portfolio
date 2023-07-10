@@ -3,6 +3,8 @@ import "../globals.css";
 import { Inter, Poppins, Montserrat, Fira_Mono } from "next/font/google";
 import Footer from "@/components/footer";
 import { AppContexts } from "@/contexts";
+import BackToTop from "@/components/Buttons/BacktoTop/Index";
+import { TbArrowNarrowUp } from "react-icons/tb";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -39,6 +41,7 @@ export default function RootLayout({
       className={`${inter.className} ${montserrat.className} ${firamono.className}  ${poppins.className}`}
     >
       <body>
+        <BackToTop />
         <AppContexts>
           <Header />
           {children}

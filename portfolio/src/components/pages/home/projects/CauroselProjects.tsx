@@ -9,7 +9,7 @@ import { PrevButton } from "./PrevButtonCaurosel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import { projectsHome } from "@/utils/projectsHome";
-import BtnIcon from "@/components/BtnIcon";
+
 import WebIcon from "@/components/Icons/WebIcon";
 import { getProjects } from "@/sanity/utils/sanity_projects.utils";
 import CardProject from "./CardProject";
