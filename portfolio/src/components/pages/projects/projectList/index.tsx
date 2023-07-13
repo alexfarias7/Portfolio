@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import ProjectCard from "./projectCard";
 import Card from "./projectCard/card";
-import Image from "next/image";
-import TechBadge from "@/components/tachbadges";
 import Link from "next/link";
+import { Project } from "@/types/schemas/projectsInfo";
 
-const ProjectList = () => {
+type ProjectsListProps = {
+  projectsPage: Project[];
+};
+
+const ProjectList = ({ projectsPage }: ProjectsListProps) => {
   return (
     /*     <section className="container-max flex flex-col gap-10">
       <Card />
@@ -19,9 +21,15 @@ const ProjectList = () => {
     </section> */
 
     <section className="container-max flex flex-col gap-10">
-      <Link href={"/projects/project01"}>
+      {/*   <Link href={"/projects/project01"}>
         <Card />
-      </Link>
+      </Link> */}
+
+      {projectsPage.map((project) => (
+        <Link key={project.title} href={`projects/${project.slug}`}>
+          <Card project={project} />
+        </Link>
+      ))}
     </section>
   );
 };

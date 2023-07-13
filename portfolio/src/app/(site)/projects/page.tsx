@@ -1,12 +1,15 @@
-import SectionTitle from "@/components/TitleSection";
 import ProjectList from "@/components/pages/projects/projectList";
 import ProjectsInto from "@/components/pages/projects/projectsIntro/Index";
+import { getProjectDetails } from "@/queries/ProjectDetailQuery";
+import { getProjectstData } from "@/queries/ProjectPageInfoQuery";
 
-const PageProjects = () => {
+const PageProjects = async () => {
+  const { projectsPage } = await getProjectstData();
+
   return (
     <main>
-      <ProjectsInto />
-      <ProjectList />
+      <ProjectsInto projectsIntro={projectsPage} />
+      <ProjectList projectsPage={projectsPage.projectInfo} />
     </main>
   );
 };

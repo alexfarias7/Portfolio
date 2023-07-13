@@ -1,4 +1,7 @@
-export const fetchHygraohQuery = async (query: string, revalidate?: number) => {
+export const fetchHygraohQuery = async <T>(
+  query: string,
+  revalidate?: number
+): Promise<T> => {
   const response = await fetch(process.env.HYGRAPY_URL!, {
     method: "POST",
     headers: {

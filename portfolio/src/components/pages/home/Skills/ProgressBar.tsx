@@ -15,9 +15,6 @@ const ProgressBar = ({
   icon,
   percentual,
 }: IProgressBar) => {
-  let widhPersonalized = `w-[${percent}%]`;
-  console.log(widhPersonalized);
-
   return (
     <div className="flex gap-[40px] items-center justify-center group text-blue0">
       <div className="group-hover:text-purple5 transition duration-500 ease-in-out sm:hidden">

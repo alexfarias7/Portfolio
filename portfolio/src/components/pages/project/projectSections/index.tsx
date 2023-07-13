@@ -1,12 +1,12 @@
+import { ProjectSection } from "@/types/schemas/projectsInfo";
 import Image from "next/image";
 import React from "react";
 
-const sections = [
-  { title: "Login", image: "/page_login.jpg" },
-  { title: "Home", image: "/page_home.jpg" },
-];
+interface ProjectSectionsProps {
+  sections: ProjectSection[];
+}
 
-const ProjectSections = () => {
+const ProjectSections = ({ sections }: ProjectSectionsProps) => {
   return (
     <section className="container-max  my-32 flex flex-col gap-3">
       {sections.map(({ image, title }) => (
@@ -20,7 +20,7 @@ const ProjectSections = () => {
             height={672}
             className="w-full aspect-auto rounded-lg object-cover"
             alt={`Imagem da sessão ${title}`}
-            src={image}
+            src={image.url}
             unoptimized
           />
         </div>

@@ -1,12 +1,15 @@
 import BtnLink from "@/components/Buttons/BtnLink/Index";
-import ProjectsIcons from "@/components/Icons/ProjectsIcons";
-import LinkEmphasis from "@/components/LinkEmphasis/Index";
 import SectionTitle from "@/components/TitleSection";
-import Link from "next/link";
+import CmsIcon from "@/components/cmsIcon/Index";
+import { ProjectsPageInfo } from "@/types/schemas/projects";
 import React from "react";
 import { HiArrowLeft } from "react-icons/hi";
 
-const ProjectsInto = () => {
+interface ProjectIntroProps {
+  projectsIntro: ProjectsPageInfo;
+}
+
+const ProjectsInto = ({ projectsIntro }: ProjectIntroProps) => {
   return (
     <section className="mt-[100px] container-max h-[calc(100vh-90px)]">
       <SectionTitle title="Meus Projetos" punctuation=":" />
@@ -14,9 +17,7 @@ const ProjectsInto = () => {
       <div className="flex justify-between items-center ">
         <div className="max-w-[600px] flex flex-col gap-[32px]">
           <p className="text-blue0  mt-4 font-montserrat font-medium text-[18px] sm:text-[16px] text-justify">
-            Aqui você poderá ver alguns trabalhos desenvolvindos por mim.
-            Navegue a vontade e explore os projetos para ver como foram criados,
-            as tecnológias utilizadas e as funcionalidaes implementadas.
+            {projectsIntro.projectsInfoIntro}
           </p>
           <div className="self-center">
             <BtnLink
@@ -30,7 +31,7 @@ const ProjectsInto = () => {
         </div>
 
         <div className=" text-blue0 hover:text-purple5 ">
-          <ProjectsIcons />
+          <CmsIcon icon={projectsIntro.projectsIntroIcon} />
         </div>
       </div>
     </section>
