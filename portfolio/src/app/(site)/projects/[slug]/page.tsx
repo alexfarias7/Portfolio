@@ -6,6 +6,7 @@ import {
   ProjectsPageStaticData,
 } from "@/types/schemas/projects";
 import { fetchHygraohQuery } from "@/utils/fetchHygraphQuery";
+import { Metadata } from "next";
 
 import React from "react";
 
@@ -32,7 +33,7 @@ export default Project;
 
 export async function generateStaticParams() {
   const query = `
-    query ProjectsSlugsQuery() {
+    query ProjectsSlugsQuery {
       projectPages(first: 100) {
         slug
       }
@@ -43,4 +44,25 @@ export async function generateStaticParams() {
   );
 
   return projectPages;
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: ProjectProps): Promise<Metadata> {
+  const data = await getProjectDetails(slug);
+  const project = data.projectPage;
+
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      images: [
+        {
+          url: project.thumbnail.url,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
 }

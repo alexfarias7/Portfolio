@@ -25,7 +25,10 @@ const firamono = Fira_Mono({
 });
 
 export const metadata = {
-  title: "Alex Farias | Portfolio",
+  title: {
+    default: "Home",
+    template: "%s | Alex Farias",
+  },
   description: "My portifolio",
   icons: [{ url: "/favicon.svg" }],
 };

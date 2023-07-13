@@ -2,6 +2,10 @@ import KnowTechs from "@/components/pages/aboutme/knowtechs/Index";
 import { getPageAboutInfoQuery } from "@/queries/AboutPageInfoQuery";
 import React from "react";
 
+export const metadata = {
+  title: "Sobre",
+};
+
 const PageAboutMe = async () => {
   const { aboutpage } = await getPageAboutInfoQuery();
 

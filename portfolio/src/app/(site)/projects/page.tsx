@@ -1,7 +1,10 @@
 import ProjectList from "@/components/pages/projects/projectList";
 import ProjectsInto from "@/components/pages/projects/projectsIntro/Index";
-import { getProjectDetails } from "@/queries/ProjectDetailQuery";
 import { getProjectstData } from "@/queries/ProjectPageInfoQuery";
+
+export const metadata = {
+  title: "Projetos",
+};
 
 const PageProjects = async () => {
   const { projectsPage } = await getProjectstData();
