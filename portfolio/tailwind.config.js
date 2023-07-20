@@ -39,12 +39,7 @@ module.exports = {
       boxShadow: {
         button: "0px 0px 68px 7px rgba(5, 150, 105, 0.4)",
       },
-      screens: {
-        xl: { max: "1200px" },
-        lg: { max: "992px" },
-        md: { max: "740px" },
-        sm: { max: "480px" },
-      },
+
       backgroundSize: {
         "size-200": "200% 200%",
       },
@@ -52,6 +47,12 @@ module.exports = {
         "pos-0": "0% 0%",
         "pos-100": "100% 100%",
       },
+    },
+    screens: {
+      xl: { max: "1200px" },
+      lg: { max: "992px" },
+      md: { max: "740px" },
+      sm: { max: "480px" },
     },
   },
   plugins: [],

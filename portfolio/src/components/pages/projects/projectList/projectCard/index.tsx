@@ -3,14 +3,18 @@ import React from "react";
 
 const ProjectCard = () => {
   return (
-    <div className=" h-[450] w-[380px] border-solid border-[2px] rounded-lg text-blue0 border-blue9 flex flex-col gap-[8px] overflow-hidden group transition-all hover:border-purple5 opacity-70 hover:opacity-100   shadowCard bg-blue6">
-      <div className="w-full h-full overflow-hidden">
+    <div className=" h-[450] w-[360px] border-solid border-[2px] rounded-lg text-blue0 border-blue9 flex flex-col gap-[8px] overflow-hidden group transition-all hover:border-purple5 opacity-70 hover:opacity-100   shadowCard bg-blue6">
+      <div
+        className="w-full h-full overflow-hidden 
+      lg:w-[380px]  lg:h-[240px]
+      "
+      >
         <Image
-          width={380}
+          width={360}
           height={200}
           src={"/project01.jpg"}
           alt="Thumbnail do projeto de um  salão de beleza"
-          className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
+          className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all "
         />
       </div>
 

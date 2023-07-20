@@ -7,6 +7,7 @@ const ProjectsIcons = () => {
       height="400"
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
+      className="w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] sm:w-[200px] sm:h-[200px]"
     >
       <g
         transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
