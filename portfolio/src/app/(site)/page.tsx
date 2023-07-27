@@ -1,5 +1,6 @@
 import MySkills from "@/components/pages/home/Skills/Index";
 import Hero from "@/components/pages/home/herosection/Index";
+import HeroIntro from "@/components/pages/home/herosection/heroIntro/Index";
 import MyProjects from "@/components/pages/home/projects/Index";
 import WhatIDo from "@/components/pages/home/whatido/Index";
 import { getPageHomeInfoQuery } from "@/queries/HomePageInfoQuery";
@@ -13,10 +14,11 @@ export default async function Home() {
 
   return (
     <main>
-      <Hero homeInfo={homePageData} />
+      <HeroIntro homeInfo={homePageData} />
       <WhatIDo homeInfo={homePageData} />
       <MySkills homeInfo={homePageData} />
-      <MyProjects projects={homePageData.highlightProjects} />
+      {/* 
+      <MyProjects projects={homePageData.highlightProjects} />  */}
     </main>
   );
 }

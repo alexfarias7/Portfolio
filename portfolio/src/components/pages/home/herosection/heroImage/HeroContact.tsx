@@ -5,21 +5,21 @@ import BtnIcon from "@/components/Buttons/BtnIcon";
 
 const HeroContact = ({ homeInfo }: homePageInfo) => {
   return (
-    <div className={" flex items-center gap-8 lg:flex-col lg:gap-2"}>
-      <div>
+    <div className={" flex items-center gap-8 lg:hidden "}>
+      <>
         <BtnIcon
-          className="rounded-[2px] hover:translate-x-[14px] hover:translate-y-0 lg:hidden"
+          className="lg:hidden"
           text="redes sociais"
           icon={<HiArrowRight />}
         />
-        <BtnIcon
-          className="rounded-[2px]  hidden lg:flex sm:text-sm sm:w-[180px] sm:px-2 :gap-2 "
+        {/*       <BtnIcon
+          className=" hidden lg:flex  "
           text="redes sociais"
-          icon={<HiArrowDown size={20} />}
-        />
-      </div>
+          icon={<HiArrowDown />}
+        /> */}
+      </>
 
-      <div className="text-2xl sm:text-lg  text-purple0 flex items-center  lg:h-10 gap-3  sm:gap-1">
+      <div className="text-2xl  text-purple0 flex items-center   gap-3  sm:gap-1">
         {homeInfo.socials.map(({ url, iconSvg }, index) => (
           <a
             className="hover:text-purple5  transition-colors sm:p-3"

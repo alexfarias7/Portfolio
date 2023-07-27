@@ -35,6 +35,7 @@ module.exports = {
         popins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         firamono: ["Fira Mono", "monospace"],
+        tinos: ["Tinos", "serif"],
       },
       boxShadow: {
         button: "0px 0px 68px 7px rgba(5, 150, 105, 0.4)",
@@ -51,7 +52,7 @@ module.exports = {
     screens: {
       xl: { max: "1200px" },
       lg: { max: "992px" },
-      md: { max: "740px" },
+      md: { max: "768px" },
       sm: { max: "480px" },
     },
   },

@@ -1,10 +1,7 @@
 import BtnIcon from "@/components/Buttons/BtnIcon";
 import WebIcon from "@/components/Icons/WebIcon";
-import { HomePageData } from "@/types/schemas/pageinfo";
-import { homePageInfo } from "@/types/schemas/pages";
-import { TypesProject } from "@/types/schemas/projects";
+
 import { Project } from "@/types/schemas/projectsInfo";
-import { projectsHome } from "@/utils/projectsHome";
 import Image from "next/image";
 
 type HighlightProjectsProps = {

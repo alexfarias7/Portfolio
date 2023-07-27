@@ -1,10 +1,9 @@
 import Header from "@/components/header";
 import "../globals.css";
-import { Inter, Poppins, Montserrat, Fira_Mono } from "next/font/google";
+import { Inter, Poppins, Montserrat, Fira_Mono, Tinos } from "next/font/google";
 import Footer from "@/components/footer";
 import { AppContexts } from "@/contexts";
 import BackToTop from "@/components/Buttons/BacktoTop/Index";
-import { TbArrowNarrowUp } from "react-icons/tb";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -24,6 +23,11 @@ const firamono = Fira_Mono({
   subsets: ["latin"],
 });
 
+const tinos = Tinos({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export const metadata = {
   title: {
     default: "Home",
@@ -40,8 +44,8 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
-      className={`${inter.className} ${montserrat.className} ${firamono.className}  ${poppins.className}`}
+      lang="pt-BR"
+      className={`${inter.className} ${montserrat.className} ${firamono.className}  ${poppins.className} ${tinos.className}`}
     >
       <body>
         <BackToTop />

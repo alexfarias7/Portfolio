@@ -14,7 +14,7 @@ const HeroImg = async ({ homeInfo }: homePageInfo) => {
   const { imageHero } = homeInfo;
 
   return (
-    <div className=" flex flex-col gap-4 justify-between md:hidden w-max items-center h-[500px]">
+    <div className=" flex flex-col gap-4 justify-between w-max items-center h-[500px]  ">
       <div className=" rounded-full border-[16px] border-solid border-blue3/20 w-max">
         {imageHero && (
           <Image
@@ -24,11 +24,13 @@ const HeroImg = async ({ homeInfo }: homePageInfo) => {
             height={360}
             width={360}
             priority
-            className="rounded-full w-[360px] h-[360px] grayscale lg:w-[300px] lg:h-[300px]"
+            className="rounded-full w-[360px] h-[360px] grayscale "
           />
         )}
       </div>
-      <HeroContact homeInfo={homeInfo} />
+      <div className="">
+        <HeroContact homeInfo={homeInfo} />
+      </div>
     </div>
   );
 };

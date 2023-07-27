@@ -8,10 +8,13 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const BtnIcon = ({ className, text, icon }: Props) => {
   return (
-    <button className={cn("btn-icons lg:min-w-[220px] ", className)}>
-      <span>{text}</span>
-      <span> {icon}</span>
-    </button>
+    <div className="relative">
+      <div className="bg-blue5 border-solid border-purple7 border-[1px] h-[50px] w-[220px]  rounded-sm left-2 absolute top-2 transition-all -z-10 " />
+      <button className={cn("btn-icons w-[220px]  h-[50px]", className)}>
+        <span>{text}</span>
+        <span> {icon}</span>
+      </button>
+    </div>
   );
 };
 export default BtnIcon;

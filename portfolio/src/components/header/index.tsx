@@ -21,7 +21,7 @@ const Header = () => {
       <div
         className={classNames(
           scrollPosition > 80 ? "py-0" : "py-[16px]",
-          "container-max flex gap-5  justify-between items-center  flex-nowrap transition-all ease-out duration-700 font-montserrat "
+          "container-max flex gap-5  justify-between items-center  flex-nowrap transition-all ease-out duration-700 font-firamono "
         )}
       >
         <LogoNavbar />

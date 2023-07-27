@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 
 const PortfolioIcon = () => {
-	return (
-		<svg
-			version="1.0"
-			xmlns="http://www.w3.org/2000/svg"
-			width="512.000000pt"
-			height="512.000000pt"
-			viewBox="0 0 512.000000 512.000000"
-			preserveAspectRatio="xMidYMid meet"
-			className="w-[24px] h-[24px] fill-current  "
-		>
-			<g
-				transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-				stroke="none"
-			>
-				<path
-					d="M1977 4674 c-81 -19 -202 -85 -270 -145 -77 -69 -151 -182 -183 -282
+  return (
+    <svg
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      width="512.000000pt"
+      height="512.000000pt"
+      viewBox="0 0 512.000000 512.000000"
+      preserveAspectRatio="xMidYMid meet"
+      className="w-[24px] h-[24px] sm:w-[20px] sm:h-[20px]  fill-current  "
+    >
+      <g
+        transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+        stroke="none"
+      >
+        <path
+          d="M1977 4674 c-81 -19 -202 -85 -270 -145 -77 -69 -151 -182 -183 -282
    -22 -70 -27 -106 -31 -244 l-6 -163 -349 0 c-390 0 -438 -6 -563 -65 -125 -60
    -228 -162 -291 -288 -73 -145 -69 -60 -69 -1362 l0 -1170 28 -82 c54 -161 169
    -295 317 -373 145 -75 1 -70 1997 -70 1249 0 1808 3 1845 11 81 16 225 91 290
@@ -36,10 +36,10 @@ const PortfolioIcon = () => {
    22 57 45 77 84 26 50 28 61 28 182 l0 128 443 3 c515 4 543 8 732 102 l105 53
    0 -527 0 -528 -28 -53 c-20 -39 -41 -62 -77 -84 l-48 -30 -1767 0 -1767 0 -48
    30 c-36 22 -57 45 -77 84 l-28 53 0 529 0 528 74 -40 c40 -21 105 -50 144 -64z"
-				/>
-			</g>
-		</svg>
-	);
+        />
+      </g>
+    </svg>
+  );
 };
 
 export default PortfolioIcon;

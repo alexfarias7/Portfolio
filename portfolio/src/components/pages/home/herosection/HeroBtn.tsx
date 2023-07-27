@@ -4,16 +4,20 @@ import PortfolioIcon from "@/components/Icons/PortfolioIcon";
 
 const HeroBtns = () => {
   return (
-    <div className="flex gap-[32px] lg:gap-4 lg:flex-col md:items-center">
+    <div className="flex gap-[32px] lg:gap-4  lg:items-center">
       <div className="group ">
-        <BtnIcon icon={<Download />} text="Download CV" />
+        <BtnIcon
+          icon={<Download />}
+          text="Download CV"
+          className="sm:text-sm sm:w-[150px] sm:px-2 sm:gap-2"
+        />
       </div>
 
       <div className="group">
         <BtnIcon
-          className=" justify-center"
+          className="sm:text-sm sm:w-[150px] sm:px-2 sm:gap-2"
           icon={<PortfolioIcon />}
-          text="My Projects"
+          text="Meus Projetos"
         />
       </div>
     </div>
