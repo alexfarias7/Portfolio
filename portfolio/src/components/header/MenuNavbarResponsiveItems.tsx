@@ -17,7 +17,7 @@ const MenuNavbarResponsiveItems = () => {
     return;
   };
   const scrollPosition = useScrollPosition();
-  const topPositionMenuResponsive = scrollPosition > 80 ? "top-24" : "top-40";
+  const topPositionMenuResponsive = scrollPosition > 80 ? "top-20" : "top-20";
 
   const growSize = isVisible ? "h-72" : "h-0";
 

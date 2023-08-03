@@ -10,7 +10,7 @@ type ProjectProps = {
 const Card = ({ project }: ProjectProps) => {
   return (
     <div
-      className=" h-[240px]  border-solid border-[2px] rounded-lg text-blue0 border-blue9 flex items-center overflow-hidden group transition-all hover:border-purple5 opacity-70 hover:opacity-100   shadowCard bg-blue6 gap-[40px] 
+      className=" h-[240px]  border-solid border-[2px] rounded-lg text-blue0 border-blue9 flex items-center overflow-hidden group transition-all hover:border-purple5 opacity-70 hover:opacity-100   shadowCard bg-blue6 gap-[40px] sm:justify-center
 
       sm:h-[480px] sm:w-[300px] sm:flex-col sm:gap-[8px] 
 

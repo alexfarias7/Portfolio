@@ -6,7 +6,7 @@ export const PrevButton: React.FC<typeButtonPropType> = (props) => {
 
   return (
     <button
-      className="embla__button -left-[16px] fill-blue0 "
+      className="embla__button left-full fill-blue0 "
       onClick={onClick}
       disabled={!enabled}
     >

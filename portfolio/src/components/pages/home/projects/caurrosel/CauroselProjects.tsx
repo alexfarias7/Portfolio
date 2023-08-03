@@ -2,21 +2,16 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 
-import { DotButtonCaurosel } from "./DotButtonCarousel";
-import { NextButton } from "./NextButtonCaurosel";
-import { PrevButton } from "./PrevButtonCaurosel";
+import { DotButtonCaurosel } from "../arrrowsButons/DotButtonCarousel";
+import { NextButton } from "../arrrowsButons/NextButtonCaurosel";
+import { PrevButton } from "../arrrowsButons/PrevButtonCaurosel";
 
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import { projectsHome } from "@/utils/projectsHome";
 
-import WebIcon from "@/components/Icons/WebIcon";
-import { getProjects } from "@/sanity/utils/sanity_projects.utils";
 import CardProject from "./CardProject";
-import { TypesProject } from "@/types/schemas/projects";
+
 import { Project } from "@/types/schemas/projectsInfo";
-import { HomePageData } from "@/types/schemas/pageinfo";
-import { homePageInfo } from "@/types/schemas/pages";
 
 type HighlightProjectsProps = {
   projects: Project[];
@@ -66,8 +61,8 @@ const CauroselProject: React.FC<PropType> = (props) => {
 
   return (
     <>
-      <div className="p-[1.6rem] relative mt-[40px]">
-        <div className="overflow-hidden" ref={emblaRef}>
+      <div className="p-[1.6rem]  relative mt-[40px]  w-full">
+        <div className="overflow-hidden " ref={emblaRef}>
           <CardProject projects={projects} />
         </div>
 

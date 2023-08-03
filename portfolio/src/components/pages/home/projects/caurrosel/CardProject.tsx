@@ -9,7 +9,7 @@ type HighlightProjectsProps = {
 };
 
 import { register } from "swiper/element/bundle";
-// register Swiper custom elements
+
 const CardProject = ({ projects }: HighlightProjectsProps) => {
   register();
   return (
@@ -28,7 +28,7 @@ const CardProject = ({ projects }: HighlightProjectsProps) => {
           />
 
           <div className="flex flex-col gap-[12px]  justify-center items-center  ">
-            <div className="flex flex-col gap-[12px]  justify-center items-center  w-[calc(100%-40px)]  xl:self-center  self-start ">
+            <div className="flex flex-col gap-[12px]  justify-center items-center max-w-lg xl:self-center  self-start ">
               <h3 className="textTitle">{project.title}</h3>
               <p className="textDescription text-justify">
                 {project.shortDescription}

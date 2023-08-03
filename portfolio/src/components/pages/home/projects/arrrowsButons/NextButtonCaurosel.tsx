@@ -6,7 +6,7 @@ export const NextButton: React.FC<typeButtonPropType> = (props) => {
 
   return (
     <button
-      className="embla__button emblaButtons left-[calc(100%-60px)] fill-blue0 "
+      className="embla__button emblaButtons left-[20%]  fill-blue0   "
       onClick={onClick}
       disabled={!enabled}
     >

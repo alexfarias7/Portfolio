@@ -17,8 +17,8 @@ export default async function Home() {
       <HeroIntro homeInfo={homePageData} />
       <WhatIDo homeInfo={homePageData} />
       <MySkills homeInfo={homePageData} />
-      {/* 
-      <MyProjects projects={homePageData.highlightProjects} />  */}
+
+      <MyProjects projects={homePageData.highlightProjects} />
     </main>
   );
 }
