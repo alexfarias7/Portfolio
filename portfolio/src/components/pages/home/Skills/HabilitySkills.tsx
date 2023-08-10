@@ -30,7 +30,7 @@ const HabilitySkilss = ({
             <CmsIcon icon={IconHability} />
           </div>
         </div>
-        <h3 className="font-montserrat text-[52px] font-semibold text-blue0 group-hover:text-purple5  transition duration-500 ease-in-out md:text-[36px] ">
+        <h3 className="font-tinos text-[52px] font-semibold text-blue0 group-hover:text-purple5  transition duration-500 ease-in-out md:text-[36px] ">
           {titleHability}
         </h3>
 
@@ -42,7 +42,7 @@ const HabilitySkilss = ({
       </div>
       {showSkill && (
         <div className="flex gap-[36px] items-center ">
-          <div className=" text-blue0  hover:text-purple5  lg:hidden w-2/5 h-2/5">
+          <div className=" text-blue0 font-tinos text-lg font-medium hover:text-purple5  lg:hidden w-2/5 h-2/5">
             <CmsIcon icon={IconSkill} />
           </div>
           {skilss}

@@ -16,6 +16,11 @@
   img {
     @apply w-[100%];
   }
+
+  p {
+    @apply font-firamono font-medium text-lg text-purple0 sm:text-sm;
+  }
+
   .container-max {
     @apply max-w-[1440px] px-[20px] mx-auto lg:px-[40px];
   }
@@ -34,7 +39,7 @@
     @apply shadow-[0px_2px_4px_rgba(0,0,0,0.14),0px_3px_4px_rgba(0,0,0,0.12),0px_1px_5px_rgba(0,0,0,0.2)];
   }
   .infoSection {
-    @apply before:content-[''] before:block  before:h-[4px] before:w-[60px]   before:bg-purple5  flex  items-center gap-[8px] sm:before:w-[40px];
+    @apply before:content-[''] before:block  before:h-[4px] before:w-[40px]   before:bg-purple5  flex  items-center gap-[8px] sm:before:w-[40px];
   }
   .hoverGroupsIcons {
     @apply group-hover:text-purple5 transition duration-500 ease-in-out fill-current;

@@ -21,7 +21,7 @@ const MyProjects = ({ projects }: HighlightProjectsProps) => {
       <div className="mt-[80px]  container-max flex flex-col items-center">
         <SectionTitle title="Meus Projetos" punctuation=":" />
         <div className="flex   justify-between mt-[20px]   sm:justify-end w-[100%]">
-          <h2 className="font-popins relative font-semibold text-[26px] text-blue0 inline-block   after:content-[''] after:block  after:h-[4px] after:bg-purple5 after:mt-1 after:absolute after:rounded-full after:w-full  sm:hidden">
+          <h2 className="font-firamono relative font-semibold text-2xl text-blue0 inline-block   after:content-[''] after:block  after:h-[4px] after:bg-purple5 after:mt-1 after:absolute after:rounded-full after:w-full  sm:hidden">
             Ultimos projetos
           </h2>
           <Link href={"/projects"}>

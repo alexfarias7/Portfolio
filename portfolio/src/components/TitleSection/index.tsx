@@ -7,7 +7,7 @@ interface ISectionTitle {
 
 const SectionTitle = ({ title, punctuation }: ISectionTitle) => {
   return (
-    <h1 className="text-blue0 font-montserrat font-semibold text-[40px] infoSection self-start w-max  lg:text-[24px]">
+    <h1 className="text-blue0 font-tinos font-semibold text-[40px] infoSection self-start w-max  lg:text-[24px]">
       {title} <span className="text-purple5">{punctuation}</span>
     </h1>
   );

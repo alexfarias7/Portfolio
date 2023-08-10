@@ -11,7 +11,7 @@ type KnowTechsProps = {
 
 const KnowTechs = ({ techs }: KnowTechsProps) => {
   return (
-    <section>
+    <section className="mt-[80px]">
       <div className="container-max">
         <SectionTitle title="Conhecimentos" punctuation=":" />
 

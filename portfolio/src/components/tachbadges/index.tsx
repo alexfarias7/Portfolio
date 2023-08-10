@@ -4,7 +4,7 @@ interface Props {
 
 const TechBadge = ({ name }: Props) => {
   return (
-    <span className="text-purple0 bg-purple5/80 text-sm py-1 px-3 rounded-lg font-firamono ">
+    <span className="text-purple0 bg-purple5/80 text-sm py-1 px-3 rounded-lg font-firamono lowercase ">
       {name}
     </span>
   );

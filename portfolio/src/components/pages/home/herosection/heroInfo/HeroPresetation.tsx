@@ -20,7 +20,7 @@ const HeroPresetation = ({ homeInfo }: homePageInfo) => {
       </div>
 
       <div className="flex flex-col gap-2  mt-4 sm:items-center">
-        <p className="font-firamono font-medium text-[18px] ">
+        <p className="">
           Apaixonado por criação e tecnologia.
           {apresetationHero}
           <span className="text-purple5 ">{occupationHero}</span>

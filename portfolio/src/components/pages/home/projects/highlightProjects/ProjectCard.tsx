@@ -12,21 +12,21 @@ type ProjectCardprops = {
 const ProjectCard = ({ project }: ProjectCardprops) => {
   return (
     <div className="flex  gap-12 lg:gap-6 flex-row lg:flex-col items-center  sm:w-[300px] ">
-      <div className="h-full    w-[420px] sm:w-[300px]  overflow-hidden   border-2">
+      <div className="h-full    w-[420px] sm:w-[300px]  ">
         <Image
           src={project.thumbnail.url}
           height={304}
           width={420}
           alt={`thumbnail  do ${project.title}`}
-          className="object- rounded-lg h-full  w-full object-cover hover:scale-110 sm:h-[304px] sm:w-[320px] transition-all"
+          className="object- rounded-lg h-[304px]  w-full object-cover hover:scale-110 sm:h-[304px] sm:w-[320px] transition-all"
         />
       </div>
 
       <div className="flex-1 sm:flex sm:flex-col sm:items-center ">
-        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50   font-firamono">
+        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50   font-tinos">
           {project.title}
         </h3>
-        <p className="text-gray-400 my-6 font-tinos">
+        <p className="text-gray-400 my-6 font-firamono">
           {project.shortDescription}
         </p>
         <div className=" flex gap-x-2 gap-y-3 mb-8 flex-wrap max-w-[380px] sm:self-start">
