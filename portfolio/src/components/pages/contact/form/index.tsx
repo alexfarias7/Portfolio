@@ -3,39 +3,13 @@
 import BtnIcon from "@/components/Buttons/BtnIcon";
 import SectionTitle from "@/components/TitleSection";
 import { FaArrowRight } from "react-icons/fa";
-import React, { useState } from "react";
-import { useForm, UseControllerProps, useController } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import z from "zod";
+import React from "react";
 import FormIcon from "@/components/Icons/Form";
-import InputNome from "./InputNome";
 import Input from "./Input";
-
-export const contactFormSchema = z.object({
-  name: z.string().min(3).max(100),
-  email: z.string().email(),
-  message: z.string().min(1).max(800),
-});
-
-export type ContactFormData = z.infer<typeof contactFormSchema>;
+import { useContactForm } from "@/hooks/useContactForm";
 
 const ContactForm = () => {
-  const {
-    handleSubmit,
-    register,
-    reset,
-    formState: { isSubmitting },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-  });
-
-  const onSubmt = (data: ContactFormData) => {
-    console.log(data);
-  };
-
-  type FormValues = {
-    FirstName: string;
-  };
+  const { errors, handleSubmit, handleform, register } = useContactForm();
 
   return (
     <section className="mt-[120px]">
@@ -49,8 +23,8 @@ const ContactForm = () => {
               comigo! Prometo responder assim que for possível.
             </p>
             <form
-              className=" w-full shadow-md rounded-lg mt-10 py-4 px-3 bg-blue4 flex flex-col gap-4"
-              onSubmit={handleSubmit(onSubmt)}
+              className=" w-full shadow-md rounded-lg mt-2 py-4 px-5 bg-blue4 flex flex-col gap-4"
+              onSubmit={handleSubmit(handleform)}
             >
               <div>
                 <label
@@ -61,12 +35,18 @@ const ContactForm = () => {
                 </label>
                 <input
                   placeholder="Digite o seu nome"
-                  className="w-full h-14 bg-blue7 rounded-lg placeholder:text-gray-500 font-firamono font-medium text-lg focus:bg-blue0 text-blue0 focus:text-purple7 p-4 focus:outline-none focus:ring-2 ring-purple7"
+                  type="text"
+                  className="w-full h-12 bg-blue7 rounded-lg placeholder:text-gray-500 font-firamono font-medium text-lg focus:bg-blue0   text-blue0 focus:text-purple7  p-4 focus:outline-none focus:ring-2 ring-purple7"
                   id="name"
-                  {...register("name")}
+                  {...register("contactForm.name")}
                 />
+                {errors.contactForm?.name?.message && (
+                  <span className="text-purple5  text-sm font-firamono font-normal">
+                    {errors.contactForm?.name?.message}
+                  </span>
+                )}
               </div>
-              {/*               <InputNome /> */}
+
               <div>
                 <label
                   className="block text-blue0 text-lg sm:text-sm font-firamono font-bold mb-2"
@@ -77,12 +57,16 @@ const ContactForm = () => {
                 <input
                   placeholder="Digite o seu e-mail"
                   type="email"
-                  className="w-full h-14 bg-blue7 rounded-lg placeholder:text-gray-500 font-firamono font-medium text-lg focus:bg-blue0   text-blue0 focus:text-purple7  p-4 focus:outline-none focus:ring-2 ring-purple7"
+                  className="w-full h-12 bg-blue7 rounded-lg placeholder:text-gray-500 font-firamono font-medium text-lg focus:bg-blue0   text-blue0 focus:text-purple7  p-4 focus:outline-none focus:ring-2 ring-purple7"
                   id="email"
-                  {...register("email")}
+                  {...register("contactForm.email")}
                 />
+                {errors.contactForm?.email?.message && (
+                  <span className="text-purple5  text-sm font-firamono font-normal">
+                    {errors.contactForm?.email?.message}
+                  </span>
+                )}
               </div>
-
               <div>
                 <label
                   className="block text-blue0 text-lg sm:text-sm font-firamono font-bold mb-2"
@@ -92,13 +76,18 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   placeholder="Digite a sua mensagem"
-                  className="resize-none w-full h-[138px] rounded-lg   p-4 focus:outline-none focus:ring-2    text-blue0 focus:text-purple7
+                  className="resize-none w-full h-[120px] rounded-lg   p-4 focus:outline-none focus:ring-2    text-blue0 focus:text-purple7
                 bg-blue7  placeholder:text-gray-500 font-firamono font-medium text-lg focus:bg-blue0   ring-purple7
                 "
                   maxLength={500}
                   id="message"
-                  {...register("message")}
+                  {...register("contactForm.text")}
                 />
+                {errors.contactForm?.text?.message && (
+                  <span className="text-purple5  text-sm font-firamono font-normal">
+                    {errors.contactForm?.text?.message}
+                  </span>
+                )}
               </div>
               <BtnIcon
                 text="Enviar"
@@ -106,7 +95,7 @@ const ContactForm = () => {
               />
             </form>
           </div>
-          <div className="text-blue0 hover:text-purple-500 transition-all">
+          <div className="text-purple5  text-sm font-firamono font-normal">
             <FormIcon />
           </div>
         </div>

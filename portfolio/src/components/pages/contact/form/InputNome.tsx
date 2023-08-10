@@ -1,8 +1,8 @@
-import React from "react";
+/*  React from "react";
 import { useForm } from "react-hook-form";
-import { ContactFormData, contactFormSchema } from ".";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Input from "./Input";
+import Input fimport { ContactFormData, contactFormSchema } from ".";
+rom "./Input";
 
 const InputNome = () => {
   const { register } = useForm<ContactFormData>({
@@ -12,7 +12,7 @@ const InputNome = () => {
   return (
     <div>
       <label
-        className="block text-blue0 text-lg sm:text-sm font-firamono font-bold mb-2"
+        className="blocimportk text-blue0 text-lg sm:text-sm font-firamono font-bold mb-2"
         htmlFor="name"
       >
         Nome
@@ -28,3 +28,4 @@ const InputNome = () => {
 };
 
 export default InputNome;
+ */

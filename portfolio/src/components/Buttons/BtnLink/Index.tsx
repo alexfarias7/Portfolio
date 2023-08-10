@@ -9,9 +9,9 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   target: "_blank" | "_self";
 }
 
-const BtnLink = ({ className, text, icon, href, target }: Props) => {
+const BtnLink = ({ className, text, icon, href, target, ...props }: Props) => {
   return (
-    <button>
+    <button {...props}>
       <Link
         href={href}
         className={cn("btn-icons w-max", className)}
