@@ -10,6 +10,7 @@ export const getPageAboutInfoQuery = async (): Promise<AboutPagedata> => {
             name
             startDate
           }
+          description
         }
       }
       

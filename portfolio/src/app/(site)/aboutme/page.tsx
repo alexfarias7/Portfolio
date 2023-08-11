@@ -12,7 +12,7 @@ const PageAboutMe = async () => {
 
   return (
     <main>
-      <IntroAbout />
+      <IntroAbout description={aboutpage.description} />
       <KnowTechs techs={aboutpage.knowTetchs} />
     </main>
   );

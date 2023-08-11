@@ -36,10 +36,5 @@ export const getProjectDetails = async (
   }
 
   `;
-  const data = fetchHygraohQuery(
-    query,
-    1000 * 60 * 60 * 24 // 1 day
-  );
-
-  return data;
+  return fetchHygraohQuery(query, 1000 * 60 * 60 * 24);
 };

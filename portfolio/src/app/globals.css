@@ -22,7 +22,10 @@
   }
 
   .container-max {
-    @apply max-w-[1440px] px-[20px] mx-auto lg:px-[40px];
+    @apply max-w-[1280px] px-[20px] mx-auto lg:px-[40px];
+  }
+  .card-style {
+    @apply border-solid border-[1px] rounded-sm text-blue0 border-blue9 font-tinos font-semibold text-2xl bg-blue6  group-hover:border-purple5 transition-all duration-500  group-hover:translate-x-1 group-hover:translate-y-1;
   }
   .menu-hover {
     @apply inline-block  cursor-pointer relative  after:content-[''] after:block  after:h-[4px] after:w-0 after:bg-purple5 after:mt-1 after:duration-700 after:absolute after:rounded-full hover:after:w-full hover:text-purple5 hover:duration-700;
