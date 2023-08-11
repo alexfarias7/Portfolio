@@ -1,18 +1,39 @@
+"use client";
+
+import { motion } from "framer-motion";
 import TechBadge from "@/components/tachbadges";
 import Image from "next/image";
 import React from "react";
 import { BtnLinkProjects } from "./BtnLinkProjects";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Project } from "@/types/schemas/projectsInfo";
+import { techBadgeAnimation } from "@/lib/animations";
 
 type ProjectCardprops = {
   project: Project;
 };
 
 const ProjectCard = ({ project }: ProjectCardprops) => {
+  const animationProps = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 50 },
+  };
   return (
-    <div className="flex  gap-12 lg:gap-6 flex-row lg:flex-col items-center  sm:w-[300px] ">
-      <div className="h-full    w-[420px] sm:w-[300px]  ">
+    <motion.div
+      className="flex  gap-12 lg:gap-6 flex-row lg:flex-col items-center  sm:w-[300px] "
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 100 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="h-full    w-[420px] sm:w-[300px]  "
+        initial={{ opacity: 0, y: 100, scale: 0.5 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 100, scale: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+      >
         <Image
           src={project.thumbnail.url}
           height={304}
@@ -20,18 +41,31 @@ const ProjectCard = ({ project }: ProjectCardprops) => {
           alt={`thumbnail  do ${project.title}`}
           className="object- rounded-lg h-[304px]  w-full object-cover hover:scale-110 sm:h-[304px] sm:w-[320px] transition-all"
         />
-      </div>
+      </motion.div>
 
       <div className="flex-1 sm:flex sm:flex-col sm:items-center ">
-        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50   font-tinos">
+        <motion.h3
+          className="flex items-center gap-3 font-medium text-lg text-gray-50   font-tinos"
+          {...animationProps}
+          transition={{ duration: 0.7 }}
+        >
           {project.title}
-        </h3>
-        <p className="text-gray-400 my-6 font-firamono">
+        </motion.h3>
+        <motion.p
+          className="text-gray-400 my-6 font-firamono"
+          {...animationProps}
+          transition={{ duration: 0.2, delay: 0.3 }}
+        >
           {project.shortDescription}
-        </p>
+        </motion.p>
         <div className=" flex gap-x-2 gap-y-3 mb-8 flex-wrap max-w-[380px] sm:self-start">
-          {project.technologies.map((tech) => (
-            <TechBadge name={tech.name} key={`${project.title}-${tech.name}`} />
+          {project.technologies.map((tech, i) => (
+            <TechBadge
+              name={tech.name}
+              key={`${project.title}-${tech.name}`}
+              {...techBadgeAnimation}
+              transition={{ duration: 0.2, delay: 0.5 + i * 0.1 }}
+            />
           ))}
         </div>
         <BtnLinkProjects
@@ -42,7 +76,7 @@ const ProjectCard = ({ project }: ProjectCardprops) => {
           className="rounded-none hover:translate-x-3 hover:translate-y-0"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

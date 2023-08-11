@@ -28,7 +28,6 @@ const CardcAtivity = ({
         <p className="text-center font-firamono  text-blue3 group-hover:text-purple5  transition duration-500 ease-in-out">
           {description}
         </p>
-        cC
       </div>
     </div>
   );

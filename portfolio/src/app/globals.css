@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e4dafe #8674d4;
+  }
+
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #e4dafe;
+    border-radius: 15px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8674d4;
+    border-radius: 15px;
+    border: 3px solid #8674d4;
+  }
+
   body {
     @apply bg-blue5 font-popins;
   }

@@ -1,6 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import NextLink from "next/link";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
@@ -17,7 +20,12 @@ export const BtnLinkProjects = ({
   target,
 }: Props) => {
   return (
-    <button>
+    <motion.button
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.2, delay: 0.8 }}
+    >
       <NextLink
         href={href}
         className={cn("btn-icons w-max", className)}
@@ -26,6 +34,6 @@ export const BtnLinkProjects = ({
         <span>{text}</span>
         <span> {icon}</span>
       </NextLink>
-    </button>
+    </motion.button>
   );
 };

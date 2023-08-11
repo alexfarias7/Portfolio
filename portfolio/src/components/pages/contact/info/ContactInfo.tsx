@@ -1,27 +1,52 @@
+"use client";
+
 import { ContacttPagedata } from "@/types/schemas/contactPageInfo";
 import CardContactInfo from "./CardContactInfo";
 import CardAddresContact from "./cardAddresContact";
 import CardNetworkContact from "./CardNetworkContact";
+import { motion } from "framer-motion";
 
 const ContactInfo = ({ contactPage }: ContacttPagedata) => {
   return (
-    <div className="flex flex-wrap justify-between xl:justify-center  gap-x-10  gap-y-8   md:mx-auto ">
-      {contactPage.mycontacts.map((contact) => (
-        <CardContactInfo
-          href={contact.textContact}
+    <motion.div className="flex flex-wrap justify-between xl:justify-center  gap-x-10  gap-y-8   md:mx-auto ">
+      {contactPage.mycontacts.map((contact, i) => (
+        <motion.div
           key={`my contact-${contact.title}`}
-          icon={contact.iconContact}
-          title={contact.title}
-          text={contact.descriptionContact}
-        />
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.15, delay: i * 0.2 }}
+        >
+          <CardContactInfo
+            href={contact.textContact}
+            icon={contact.iconContact}
+            title={contact.title}
+            text={contact.descriptionContact}
+          />
+        </motion.div>
       ))}
-      <CardAddresContact
-        icon={contactPage.myAddress.iconContact}
-        text={contactPage.myAddress.descriptionContact}
-        title={contactPage.myAddress.title}
-      />
-      <CardNetworkContact contactPage={contactPage} />
-    </div>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.15, delay: 0.6 }}
+      >
+        <CardAddresContact
+          icon={contactPage.myAddress.iconContact}
+          text={contactPage.myAddress.descriptionContact}
+          title={contactPage.myAddress.title}
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.15, delay: 0.8 }}
+      >
+        <CardNetworkContact contactPage={contactPage} />
+      </motion.div>
+    </motion.div>
   );
 };
 

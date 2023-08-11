@@ -4,6 +4,7 @@ import React from "react";
 import LogoNavbar from "./LogoNavbar";
 import useScrollPosition from "@/hooks/useScrollPosition";
 import Navbar from "./navbar";
+import { motion } from "framer-motion";
 
 const Header = () => {
   function classNames(...classes: string[]) {
@@ -12,11 +13,14 @@ const Header = () => {
 
   const scrollPosition = useScrollPosition();
   return (
-    <header
+    <motion.header
       className={classNames(
         scrollPosition > 0 ? "shadow  " : "shadow-none",
         "fixed top-0 z-20 h-max inset-0 bg-blue5 transition-shadow "
       )}
+      initial={{ top: -100 }}
+      animate={{ top: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <div
         className={classNames(
@@ -27,7 +31,7 @@ const Header = () => {
         <LogoNavbar />
         <Navbar />
       </div>
-    </header>
+    </motion.header>
   );
 };
 

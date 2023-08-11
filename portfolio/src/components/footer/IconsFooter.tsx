@@ -6,7 +6,7 @@ import GithubIcon from "../Icons/GithubIcon";
 
 const IconsFooter = () => {
   return (
-    <div className="flex gap-[8px] ">
+    <div className="flex gap-[8px] mr-[40px] sm:mr-0">
       <InstragamIcon /> <TwiterIcon /> <LinjkendinIcon /> <GithubIcon />
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { TbArrowNarrowUp } from "react-icons/tb";
+import { AnimatePresence, motion } from "framer-motion";
 import BtnOnlyIcon from "../BtnOnlyIcon";
 import { useCallback, useEffect, useState } from "react";
 
@@ -24,13 +25,13 @@ const BackToTop = () => {
   return (
     <>
       {show && (
-        <div className="fixed right-4 bottom-4 z-20">
+        <motion.div className="fixed right-4 bottom-4 z-20">
           <BtnOnlyIcon
             icon={<TbArrowNarrowUp size={20} />}
             className="rounded-[50%] p-[10px]"
             onClick={scrollToTop}
           />
-        </div>
+        </motion.div>
       )}
     </>
   );

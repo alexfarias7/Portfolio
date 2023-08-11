@@ -5,6 +5,8 @@ import Card from "./projectCard/card";
 import Link from "next/link";
 import { Project } from "@/types/schemas/projectsInfo";
 import ProjectCard from "./projectCard";
+import { motion } from "framer-motion";
+import { fadeUpAnimation } from "@/lib/animations";
 
 type ProjectsListProps = {
   projectsPage: Project[];
@@ -17,14 +19,16 @@ const ProjectList = ({ projectsPage }: ProjectsListProps) => {
      flex-1  sm:items-center
     "
     >
-      {projectsPage.map((project) => (
-        <Link
-          key={project.title}
-          href={`projects/${project.slug}`}
-          className="sm:w-[300px]"
+      {projectsPage.map((project, i) => (
+        <motion.div
+          key={`project-${project.title}`}
+          {...fadeUpAnimation}
+          transition={{ duration: 0.5, delay: i * 0.3 }}
         >
-          <Card project={project} />
-        </Link>
+          <Link href={`projects/${project.slug}`} className="sm:w-[300px]">
+            <Card project={project} />
+          </Link>
+        </motion.div>
       ))}
     </section>
   );

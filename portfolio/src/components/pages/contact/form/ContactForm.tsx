@@ -1,19 +1,23 @@
 "use client";
 
-import BtnIcon from "@/components/Buttons/BtnIcon";
 import { useContactForm } from "@/hooks/useContactForm";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import ContactFormBtn from "./ContactFormBtn";
+import { motion } from "framer-motion";
 
 const Form = () => {
   const { errors, handleSubmit, handleform, register, isSubmitting } =
     useContactForm();
 
   return (
-    <form
+    <motion.form
       className=" shadow-md border-solid border-purple7 border-[1px] rounded-lg mt-2 md:mt-0 bg-blue4 flex flex-col gap-6 w-max h-max p-5"
       onSubmit={handleSubmit(handleform)}
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="flex gap-5 lg:flex-col lg:gap-6">
         <div className="relative">
@@ -106,9 +110,7 @@ const Form = () => {
         icon={<FaArrowRight size={18} className="" />}
         disabled={isSubmitting}
       />
-      {/*       <BtnIcon text="Enviar" icon={<FaArrowRight size={18} className="" />} />
-       */}{" "}
-    </form>
+    </motion.form>
   );
 };
 
