@@ -7,7 +7,8 @@ import { FaArrowRight } from "react-icons/fa";
 import ContactFormBtn from "./ContactFormBtn";
 
 const Form = () => {
-  const { errors, handleSubmit, handleform, register } = useContactForm();
+  const { errors, handleSubmit, handleform, register, isSubmitting } =
+    useContactForm();
 
   return (
     <form
@@ -103,6 +104,7 @@ const Form = () => {
       <ContactFormBtn
         text="Enviar"
         icon={<FaArrowRight size={18} className="" />}
+        disabled={isSubmitting}
       />
       {/*       <BtnIcon text="Enviar" icon={<FaArrowRight size={18} className="" />} />
        */}{" "}

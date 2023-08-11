@@ -1,9 +1,10 @@
 import Header from "@/components/header";
-import "../globals.css";
+import "./globals.css";
 import { Inter, Poppins, Montserrat, Fira_Mono, Tinos } from "next/font/google";
 import Footer from "@/components/footer";
 import { AppContexts } from "@/contexts";
 import BackToTop from "@/components/Buttons/BacktoTop/Index";
+import { Toaster } from "./providers/toaster";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -48,6 +49,7 @@ export default function RootLayout({
       className={`${inter.className} ${montserrat.className} ${firamono.className}  ${poppins.className} ${tinos.className}`}
     >
       <body>
+        <Toaster />
         <BackToTop />
         <AppContexts>
           <Header />
