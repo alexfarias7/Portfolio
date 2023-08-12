@@ -16,10 +16,10 @@ const ContactForm = ({ contactPage }: ContacttPagedata) => {
 
         <motion.div
           className="flex flex-1 flex-col  self-start md:h-[calc(100vh-80px)]"
-          initial={{ opacity: 0, x: 100 }}
+          /*       initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
-          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }} */
         >
           <SectionTitle title="Fale comigo" punctuation="!" />
           <div className="w-full  flex flex-col ">
