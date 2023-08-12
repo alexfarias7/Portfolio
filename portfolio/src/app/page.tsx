@@ -1,5 +1,4 @@
 import MySkills from "@/components/pages/home/Skills/Index";
-import Hero from "@/components/pages/home/herosection/Index";
 import HeroIntro from "@/components/pages/home/herosection/heroIntro/Index";
 import MyProjects from "@/components/pages/home/projects/Index";
 import WhatIDo from "@/components/pages/home/whatido/Index";
