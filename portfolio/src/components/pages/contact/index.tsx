@@ -10,7 +10,10 @@ import { motion } from "framer-motion";
 
 const ContactForm = ({ contactPage }: ContacttPagedata) => {
   return (
-    <section className="mt-[100px] h-[calc(100vh-100px)] md:h-max md:mt-[80px]">
+    <section
+      className="mt-[100px] h-[calc(100vh-100px)] md:h-max md:mt-[80px] border-solid border-red-600 border-2
+"
+    >
       <div className="container-max flex justify-between gap-20 md:flex-col-reverse  items-center ">
         <Form />
 
