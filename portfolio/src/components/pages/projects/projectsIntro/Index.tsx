@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import BtnLink from "@/components/Buttons/BtnLink/Index";
+import BtnLink from "@/components/Buttons/BtnLinkProject/Index";
 import ProjectsIcons from "@/components/Icons/ProjectsIcons";
 import SectionTitle from "@/components/TitleSection";
 import CmsIcon from "@/components/cmsIcon/Index";

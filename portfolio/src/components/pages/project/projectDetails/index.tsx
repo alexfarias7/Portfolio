@@ -6,7 +6,7 @@ import React from "react";
 import { TbBrandGithub } from "react-icons/tb";
 import { FiGlobe } from "react-icons/fi";
 import { HiArrowLeft } from "react-icons/hi";
-import BtnLink from "@/components/Buttons/BtnLink/Index";
+import BtnLink from "@/components/Buttons/BtnLinkProject/Index";
 import { Project } from "@/types/schemas/projectsInfo";
 import { motion } from "framer-motion";
 import { fadeUpAnimation, techBadgeAnimation } from "@/lib/animations";
@@ -19,7 +19,7 @@ const ProjectDetails = ({ projectPage }: ProjectDetailsProps) => {
   return (
     <section className=" container-max min-h-[750px] flex flex-col items-center justify-end relative pb-24  sm:pb-10 py-24 px-6 overflow-hidden">
       <motion.div
-        className="absolute inset-0 z-[-1] bg-red-200"
+        className="absolute inset-0 z-[-15] bg-red-200"
         style={{
           background: `url(/hero-bg.png) no-repeat center/cover,url(${projectPage.thumbnail.url}) no-repeat center/cover`,
         }}
@@ -50,7 +50,7 @@ const ProjectDetails = ({ projectPage }: ProjectDetailsProps) => {
       </div>
 
       <motion.div
-        className="my-12 sm:my-6  flex sm:flex-col items-center  gap-4 sm:gap-6 "
+        className="my-12 sm:my-6  flex sm:flex-col items-center  gap-8 sm:gap-6 "
         {...fadeUpAnimation}
       >
         {projectPage?.githubUrl && (
@@ -65,7 +65,7 @@ const ProjectDetails = ({ projectPage }: ProjectDetailsProps) => {
               text="repositorio"
               icon={<TbBrandGithub />}
               target="_blank"
-              className="sm:w-[300px]"
+              className=""
             />
           </motion.div>
         )}
@@ -82,7 +82,7 @@ const ProjectDetails = ({ projectPage }: ProjectDetailsProps) => {
               text="Projeto Online"
               icon={<FiGlobe />}
               target="_blank"
-              className="sm:w-[300px]"
+              className=""
             />
           </motion.div>
         )}
@@ -98,8 +98,8 @@ const ProjectDetails = ({ projectPage }: ProjectDetailsProps) => {
           href="/projects"
           icon={<HiArrowLeft size={20} />}
           target="_self"
-          text="Voltar para projetos"
-          className="sm:w-[300px]"
+          text="Ir para projetos"
+          className=""
         />
       </motion.div>
     </section>

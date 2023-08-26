@@ -19,8 +19,6 @@ type ProjectProps = {
 const Project = async ({ params: { slug } }: ProjectProps) => {
   const { projectPage } = await getProjectDetails(slug);
 
-  console.log(projectPage);
-
   return (
     <div className="mt-[200px] ">
       <ProjectDetails projectPage={projectPage} />
