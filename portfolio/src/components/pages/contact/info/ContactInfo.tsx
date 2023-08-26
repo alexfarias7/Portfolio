@@ -15,7 +15,7 @@ const ContactInfo = ({ contactPage }: ContacttPagedata) => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.15, delay: i * 0.2 }}
+          transition={{ duration: 0.5, delay: i * 0.2 }}
         >
           <CardContactInfo
             href={contact.textContact}
@@ -29,7 +29,7 @@ const ContactInfo = ({ contactPage }: ContacttPagedata) => {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.15, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
         <CardAddresContact
           icon={contactPage.myAddress.iconContact}
@@ -42,7 +42,7 @@ const ContactInfo = ({ contactPage }: ContacttPagedata) => {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.15, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         <CardNetworkContact contactPage={contactPage} />
       </motion.div>

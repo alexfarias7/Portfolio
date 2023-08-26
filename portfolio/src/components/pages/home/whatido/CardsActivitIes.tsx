@@ -16,7 +16,7 @@ const CardsActivitIes = ({ homeInfo }: homePageInfo) => {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.15, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <CardcAtivity
               activity={activity}
